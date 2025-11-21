@@ -1,0 +1,85 @@
+@import "compass/css3";
+
+@import "compass/reset/utilities";
+
+@include global-reset;
+
+@import url(https://fonts.googleapis.com/css?family=Lustria|Lato:300);
+
+$title_font: 'Lustria', serif;
+$base_font: 'Lato', sans-serif;
+$dark: #222222;
+$clouds: #eeeeee;
+$grey: #999999;
+
+body {
+  overflow-x: hidden;
+}
+
+ul {
+  width: 100%;
+  overflow: hidden;
+  li {
+    position: relative;
+    cursor: pointer;
+    .overlay {
+      @include opacity(0.4);
+      background: #000;
+      display: blocK;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: 8;
+      
+    }
+    .info {
+      position: relative;
+      width: 100%;
+      z-index: 999;
+      color: #fff;
+      display: block;
+      text-align:center;
+      padding: 30px 20px 20px;
+      @include box-sizing(border-box);
+      h2 {
+        font-family: $title_font;
+        font-size: 30px;
+        line-height: 50px; 
+      }
+      p {
+        font-family: $base_font;
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 20px;
+      }
+      .btn {
+       line-height: 30px;
+       display: inline-block;
+       padding: 0 10px;
+       border: 1px solid #fff;
+       font-size: 14px;
+       text-transform: uppercase;
+       text-decoration: none;
+       color: #fff;
+       font-family: $base_font;
+       margin-bottom: 20px;
+      }
+      .description {
+        display: none;
+      }
+    }//.info
+    
+    .bg-img {
+      img {
+        position: absolute;
+        //width: 100%;
+        //height: auto;
+        top:0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+    }
+  }
+}
