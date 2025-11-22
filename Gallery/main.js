@@ -9,7 +9,7 @@ $(document).ready(function () {
 
 	   	$(this).find('.btn').click(function(e){
 
-	   	console.log('Botão clicado');
+	   	//console.log('Botão clicado');
 	  	
 	  	e.preventDefault();
 
