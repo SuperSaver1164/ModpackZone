@@ -169,6 +169,32 @@
   </li> 
 </ul>
 
+    <body class="navbar">
+  <div id="navbar"></div>
+
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        // Insert navbar HTML
+        document.getElementById("navbar").innerHTML = data;
+
+        // Find and wrap the current page link
+        const links = document.querySelectorAll("#navbar a");
+        const currentPage = window.location.pathname.split("/").pop();
+
+        links.forEach(link => {
+          const linkPage = link.getAttribute("href");
+          if (linkPage === currentPage) {
+            const wrapper = document.createElement("current");
+            link.parentElement.replaceWith(wrapper);
+            wrapper.appendChild(link.parentElement.cloneNode(true));
+          }
+        });
+      });
+  </script>
+</body>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="main.js"></script>  <!-- JS linked -->
 </body>
