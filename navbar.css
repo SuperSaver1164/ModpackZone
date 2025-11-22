@@ -47,3 +47,19 @@ end{
   float: right;
   border-left: 2px solid #bbb;
 }
+
+navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  z-index: 9999;      /* sits above gallery overlays */
+  display: block;     /* custom tags need this */
+  background: #111;   /* optional: make it visible */
+}
+
+
+body {
+  padding-top: 50px;  /* match your navbar height */
+}
