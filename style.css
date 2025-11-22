@@ -9,8 +9,8 @@ html {
 
 body{
 
-  /*background-image: linear-gradient(#d6d6d6, #008fc7, #008fc7, #d6d6d6);*/
-  background: linear-gradient(0deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+  background-image: linear-gradient(#d6d6d6, #008fc7, #008fc7, #d6d6d6);
+  /*background: linear-gradient(0deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);*/
   background-size: cover;
   background-attachment: fixed;
 }
