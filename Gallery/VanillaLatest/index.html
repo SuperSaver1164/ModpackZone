@@ -32,6 +32,7 @@ fetch("images.json")
 
       const box = document.createElement("div");
       box.className = `img-box ${size}`;
+      box.setAttribute("tabindex", "0");  // ← THIS FIXES IOS HOVER
 
       box.innerHTML = `
         <img src="${img.src}" alt="${img.title}">
