@@ -18,7 +18,7 @@ function deterministicSize(filename) {
     hash |= 0;
   }
 
-  const sizes = ["small", "wide", "big"];
+  const sizes = ["wide", "big"]; // "small", | no more small size
   return sizes[Math.abs(hash) % sizes.length];
 }
 
