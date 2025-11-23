@@ -44,6 +44,25 @@ fetch("images.json")
       gallery.appendChild(box);
     });
   });
+
+  // Enable tap-to-show-overlay on mobile
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".gallery-item");
+
+  items.forEach(item => {
+    item.addEventListener("touchstart", function (e) {
+      // Already active? Remove on second tap
+      if (this.classList.contains("touch")) {
+        this.classList.remove("touch");
+      } else {
+        // Remove from all others
+        items.forEach(i => i.classList.remove("touch"));
+        this.classList.add("touch");
+      }
+    });
+  });
+});
+
 </script>
 
 <body class="navbar">

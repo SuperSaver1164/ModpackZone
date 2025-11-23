@@ -64,3 +64,13 @@
 body {
   background: radial-gradient(circle at center, #f2f2f5 60%, #d3d4d7);
 }
+
+/* Hover overlay (desktop) */
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Mobile: show overlay when item has class "touch" */
+.gallery-item.touch .overlay {
+    opacity: 1;
+}
