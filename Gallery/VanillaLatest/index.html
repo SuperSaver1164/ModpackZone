@@ -31,7 +31,7 @@ fetch("images.json")
       const size = deterministicSize(img.src);
 
       const box = document.createElement("div");
-      box.className = "gallery-item";
+      box.className = `img-box ${size}`;
       box.setAttribute("tabindex", "0");  // ← THIS FIXES IOS HOVER
 
       box.innerHTML = `
