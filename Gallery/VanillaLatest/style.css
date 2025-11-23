@@ -5,13 +5,7 @@
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
-
-  /* NEW: limit to an even number of columns */
-  max-width: calc((220px * 4) + (15px * 3)); /* 4 columns max, always even */
-  margin: 0 auto;
 }
-
-
 
 .img-box {
   position: relative;
