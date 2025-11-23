@@ -1,4 +1,4 @@
-/*$(document).ready(function () {
+$(document).ready(function () {
 
 	//hide all descriptions
 	$('.description').hide();
@@ -11,7 +11,7 @@
 
 	   	//console.log('Botão clicado');
 	  	
-	  	e.preventDefault();
+	  	//e.preventDefault(); Allow direct links
 
 	  	 //NO MATTER WHAT WE CLOSE ALL OPEN SLIDES
 		 	$('.description').slideUp('normal');
@@ -38,4 +38,3 @@
   showFullHeight();
   
 });
-*/
