@@ -46,6 +46,28 @@ fetch("images.json")
   });
 </script>
 
+<script>
+    fetch("/ModpackZone/navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        // Insert navbar HTML
+        document.getElementById("navbar").innerHTML = data;
+
+        // Find and wrap the current page link
+        const links = document.querySelectorAll("#navbar a");
+        const currentPage = window.location.pathname.split("/").pop();
+
+        links.forEach(link => {
+          const linkPage = link.getAttribute("href");
+          if (linkPage === currentPage) {
+            const wrapper = document.createElement("current");
+            link.parentElement.replaceWith(wrapper);
+            wrapper.appendChild(link.parentElement.cloneNode(true));
+          }
+        });
+      });
+  </script>
+
 
 
 </body>
