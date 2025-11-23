@@ -1,26 +1,5 @@
 [
-  {
-    "src": "Photos/VanillaLatest.png",
-    "title": "Main photo",
-    "desc": "A peaceful mountain scene.",
-    "size": "big"
-  },
-  {
-    "src": "../Photos/VanillaLatest.png",
-    "title": "Beach",
-    "desc": "Sunny day at the beach.",
-    "size": "tall"
-  },
-  {
-    "src": "../Photos/VanillaLatest.png",
-    "title": "Forest Trail",
-    "desc": "A walk through nature.",
-    "size": "wide"
-  },
-  {
-    "src": "../Photos/VanillaLatest.png",
-    "title": "City Lights",
-    "desc": "Night skyline.",
-    "size": "small"
-  }
+  { "src": "../Photos/VanillaLatest.png", "title": "Mountain", "desc": "Nice mountain." },
+  { "src": "../Photos/VanillaLatest.png", "title": "Bridge", "desc": "Old bridge." },
+  { "src": "../Photos/VanillaLatest.png", "title": "Forest", "desc": "Trees everywhere." }
 ]

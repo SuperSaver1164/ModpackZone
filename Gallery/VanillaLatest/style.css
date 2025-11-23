@@ -7,44 +7,43 @@
   box-sizing: border-box;
 }
 
-/* Base image box */
 .img-box {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  height: 220px; /* default block size */
+  height: 220px;
 }
 
-/* Size modifiers */
+/* Sizes */
 .img-box.small { grid-row: span 1; grid-column: span 1; }
 .img-box.wide  { grid-column: span 2; }
-.img-box.tall  { grid-row: span 2; height: 450px; }
 .img-box.big   { grid-row: span 2; grid-column: span 2; height: 450px; }
 
-/* Images */
+/* Image */
 .img-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform .35s ease;
 }
+
 .img-box:hover img {
   transform: scale(1.1);
 }
 
-/* Overlay: centered, clean */
+/* Overlay centered */
 .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.55);
   opacity: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;  /* <— perfect centering */
-  align-items: center;       /* <— perfect centering */
-  text-align: center;
-  padding: 20px;
   color: white;
+  padding: 20px;
+  text-align: center;
   transition: opacity .3s ease;
 }
 
@@ -55,12 +54,10 @@
 .overlay h3 {
   margin: 0 0 8px 0;
   font-size: 1.5em;
-  font-weight: 600;
 }
 
 .overlay p {
   margin: 0;
-  font-size: 1em;
   max-width: 80%;
 }
 
