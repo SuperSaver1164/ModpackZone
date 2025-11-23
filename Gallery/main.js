@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/*$(document).ready(function () {
 
 	//hide all descriptions
 	$('.description').hide();
@@ -38,3 +38,4 @@ $(document).ready(function () {
   showFullHeight();
   
 });
+*/
