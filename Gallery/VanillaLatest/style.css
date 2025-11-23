@@ -63,3 +63,7 @@
   font-size: 1em;
   max-width: 80%;
 }
+
+body {
+  background: radial-gradient(circle at center, #f2f2f5 60%, #d3d4d7);
+}
