@@ -1,5 +1,5 @@
 [
-  { "src": "../Photos/VanillaLatest.png", "title": "Mountain", "desc": "Nice mountain." },
-  { "src": "../Photos/VanillaLatest.png", "title": "Bridge", "desc": "Old bridge." },
-  { "src": "../Photos/VanillaLatest.png", "title": "Forest", "desc": "Trees everywhere." }
+  { "src": "Photos/VanillaLatest.png", "title": "Mountain", "desc": "Nice mountain." },
+  { "src": "Photos/VanillaLatest.png", "title": "Bridge", "desc": "Old bridge." },
+  { "src": "Photos/VanillaLatest.png", "title": "Forest", "desc": "Trees everywhere." }
 ]
