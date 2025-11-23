@@ -15,7 +15,7 @@ fetch("images.json")
 
     images.forEach(img => {
       const box = document.createElement("div");
-      box.className = "img-box";
+      box.className = `img-box ${img.size || "small"}`;
 
       box.innerHTML = `
         <img src="${img.src}" alt="${img.title}">
@@ -27,9 +27,9 @@ fetch("images.json")
 
       gallery.appendChild(box);
     });
-  })
-  .catch(err => console.error("Failed to load images.json:", err));
+  });
 </script>
+
 
 </body>
 </html>

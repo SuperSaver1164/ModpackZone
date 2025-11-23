@@ -1,17 +1,26 @@
 [
   {
-    "src": "gallery/img1.jpg",
-    "title": "Image One",
-    "desc": "Short description for image one."
+    "src": "../Photos/VanillaLatest.png",
+    "title": "Main photo",
+    "desc": "A peaceful mountain scene.",
+    "size": "big"
   },
   {
-    "src": "gallery/img2.jpg",
-    "title": "Image Two",
-    "desc": "Short description for image two."
+    "src": "../Photos/VanillaLatest.png",
+    "title": "Beach",
+    "desc": "Sunny day at the beach.",
+    "size": "tall"
   },
   {
-    "src": "gallery/img3.jpg",
-    "title": "Image Three",
-    "desc": "Short description for image three."
+    "src": "../Photos/VanillaLatest.png",
+    "title": "Forest Trail",
+    "desc": "A walk through nature.",
+    "size": "wide"
+  },
+  {
+    "src": "../Photos/VanillaLatest.png",
+    "title": "City Lights",
+    "desc": "Night skyline.",
+    "size": "small"
   }
 ]
