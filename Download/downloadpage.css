@@ -1,0 +1,103 @@
+/* GLOBAL RESETS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #0e2a47, #123d63, #0f2e4c);
+  background-attachment: fixed;
+  font-family: "Inter", sans-serif;
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* CONTAINER WRAPPER */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* -------- GRID FIX (ALWAYS 2 COLUMNS) -------- */
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* EXACTLY TWO */
+  gap: 25px;
+  width: 100%;
+}
+
+/* -------- CARDS -------- */
+.download-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+.download-card h3 {
+  margin-bottom: 10px;
+  color: #aee0ff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.download-card p {
+  margin-bottom: 8px;
+}
+
+.download-card a {
+  color: #aee0ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.download-card a:hover {
+  opacity: 0.7;
+}
+
+/* -------- CHANGELOG BOX -------- */
+.changelog {
+  margin-top: 12px;
+  background: rgba(255,255,255,0.06);
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* Bullet fix — KEEP BULLETS INSIDE BOX AND INLINE */
+.changelog ul {
+  list-style-position: inside;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.changelog li {
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+/* FOOTER + OLD PAGE LINK */
+.old-link {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.old-link a {
+  color: #aee0ff;
+  font-weight: 600;
+}
+
+.footer {
+  text-align: center;
+  opacity: 0.85;
+  margin-top: 40px;
+}
