@@ -8,7 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       background: linear-gradient(135deg, #0e2a47, #123d63, #0f2e4c);
       background-attachment: fixed;
@@ -16,66 +17,82 @@
       color: #eee;
       line-height: 1.6;
     }
+
     .container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 30px 20px;
     }
+
     h1, h2 {
       text-align: center;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-    a {
-      color: #aee0ff;
-      text-decoration: none;
+      margin-bottom: 25px;
       font-weight: 600;
     }
-    a:hover { opacity: 0.7; }
 
-    /* Link to old downloads page */
-    .old-page-link {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 1.1rem;
-    }
-
-    /* Grid of cards */
+    /* GRID */
     .download-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 25px;
-      margin-top: 20px;
     }
 
+    /* CARD */
     .download-card {
       background: rgba(255,255,255,0.1);
       border-radius: 16px;
       padding: 20px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.35);
     }
+
     .download-card h3 {
       margin-bottom: 10px;
-      font-size: 1.3rem;
       color: #aee0ff;
     }
+
     .download-card p {
       margin-bottom: 8px;
-      font-size: 0.95rem;
     }
+
+    .download-card a {
+      color: #aee0ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .download-card a:hover {
+      opacity: 0.7;
+    }
+
+    /* CHANGELOG BOX */
     .changelog {
       margin-top: 12px;
-      font-size: 0.9rem;
-      background: rgba(255,255,255,0.05);
+      background: rgba(255,255,255,0.06);
       padding: 12px;
-      border-radius: 8px;
+      border-radius: 10px;
+    }
+
+    /* FIX UL BULLETS ALIGNMENT */
+    .changelog ul {
+      list-style-position: inside; /* prevents bullets sticking left */
+      padding-left: 4px; /* tiny indent */
     }
 
     .footer {
       text-align: center;
-      margin-top: 50px;
-      font-size: 0.9rem;
       opacity: 0.85;
+      margin-top: 40px;
+    }
+
+    .old-link {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+
+    .old-link a {
+      color: #aee0ff;
+      font-weight: 600;
     }
   </style>
 </head>
@@ -85,61 +102,80 @@
 
     <h1>Modpack Downloads</h1>
 
-    <div class="old-page-link">
-      Looking for older modpacks?
-      <a href="/ModpackZone/downloadpage.html">Click here for the legacy downloads page.</a>
+    <!-- Link to old page -->
+    <div class="old-link">
+      Looking for older modpacks?  
+      <a href="/ModpackZone/downloadpage.html">Click here for the legacy downloads page</a>.
     </div>
 
-    <div id="downloads" class="download-grid">
-      <!-- JS will inject the cards here -->
+    <div class="download-grid" id="downloadGrid">
+      <!-- JS loads cards here -->
     </div>
 
     <div class="footer">
-      Maintained by <a href="https://github.com/SuperSaver1164">SuperSaver1164</a>
+      Maintained by <a href="https://github.com/SuperSaver1164">SuperSaver1164</a>.
     </div>
+
   </div>
 
   <script>
-    async function loadDownloads() {
-      try {
-        const response = await fetch("downloads.json");
-        const data = await response.json();
+    fetch("downloads.json")
+      .then(res => res.json())
+      .then(data => {
+        const grid = document.getElementById("downloadGrid");
 
-        const container = document.getElementById("downloads");
-
-        data.downloads.forEach(entry => {
+        data.downloads.forEach(pack => {
           const card = document.createElement("div");
           card.className = "download-card";
 
-          let changelogHTML = "";
-          if (entry.changelog && entry.changelog.length > 0) {
-            changelogHTML = `
-              <div class="changelog">
-                <strong>Changelog:</strong>
-                <ul>${entry.changelog.map(item => `<li>${item}</li>`).join("")}</ul>
-              </div>
-            `;
-          }
-
           card.innerHTML = `
-            <h3>${entry.title}</h3>
-            <p><strong>Date:</strong> ${entry.date}</p>
-            <p><strong>Filename:</strong> ${entry.filename}</p>
-            <p><strong>Size:</strong> ${entry.size}</p>
-            <p><strong>Requires:</strong> ${entry.requires}</p>
-            <p><a href="${entry.downloadUrl}">Download</a></p>
-            ${changelogHTML}
+            <h3>${pack.title}</h3>
+            <p><strong>Filename:</strong> ${pack.filename}</p>
+            <p><strong>Size:</strong> ${pack.size}</p>
+            <p><strong>Requires:</strong> ${pack.requires}</p>
+            <p><a href="${pack.link}">Download</a></p>
+
+            <div class="changelog">
+              <strong>Changelog:</strong>
+              <ul>
+                ${pack.changelog.map(item => `<li>${item}</li>`).join("")}
+              </ul>
+            </div>
           `;
 
-          container.appendChild(card);
+          grid.appendChild(card);
         });
-      } catch (err) {
-        console.error("Failed to load downloads.json", err);
-      }
-    }
-
-    loadDownloads();
+      })
+      .catch(err => console.error("Could not load downloads.json", err));
   </script>
 
 </body>
+
+<body class="navbar">
+  <div id="navbar"></div>
+
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        // Insert navbar HTML
+        document.getElementById("navbar").innerHTML = data;
+
+        // Find and wrap the current page link
+        const links = document.querySelectorAll("#navbar a");
+        const currentPage = window.location.pathname.split("/").pop();
+
+        links.forEach(link => {
+          const linkPage = link.getAttribute("href");
+          if (linkPage === currentPage) {
+            const wrapper = document.createElement("current");
+            link.parentElement.replaceWith(wrapper);
+            wrapper.appendChild(link.parentElement.cloneNode(true));
+          }
+        });
+      });
+  </script>
+</body>
+
+
 </html>
