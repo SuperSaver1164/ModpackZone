@@ -2,31 +2,28 @@
   "downloads": [
     {
       "version": "1.0",
-      "title": "Modpack v1.0 – Release",
-      "date": "2025-02-10",
-      "filename": "modpack-v1.0.zip",
-      "size": "250 MB",
-      "requires": "Minecraft 1.21.1 (Fabric)",
-      "downloadUrl": "Downloads/modpack-v1.0.zip",
+      "title": "ServerPack 3.1.5",
+      "date": "11/28/2025",
+      "filename": "ServerPack3.1.5.zip",
+      "size": "IDK MB",
+      "requires": "Minecraft 1.20.1 (Forge)",
+      "downloadUrl": "Packs/ServerPack3.1.5.zip",
       "changelog": [
-        "Initial stable release",
-        "Updated Create to latest version",
-        "Improved performance settings",
-        "General bug fixes and optimizations"
+        "Update to Create 6.0.6",
+        "Includes Vanillin for better performance"
       ]
     },
     {
-      "version": "0.9",
-      "title": "Modpack v0.9 – Beta",
-      "date": "2025-01-30",
-      "filename": "modpack-v0.9-beta.zip",
-      "size": "230 MB",
-      "requires": "Minecraft 1.21.1 (Fabric)",
-      "downloadUrl": "Downloads/modpack-v0.9-beta.zip",
+      "version": "0.0",
+      "title": "Placeholder",
+      "date": "11/28/2025",
+      "filename": "none",
+      "size": "2 TB",
+      "requires": "Minecraft 1.21.11 (Fabric)",
+      "downloadUrl": "none",
       "changelog": [
-        "Beta release",
-        "Mods A, B, C included",
-        "First feature test version"
+        "Hello",
+        "Hi"
       ]
     }
   ]
