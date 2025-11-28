@@ -1,0 +1,33 @@
+{
+  "downloads": [
+    {
+      "version": "1.0",
+      "title": "Modpack v1.0 – Release",
+      "date": "2025-02-10",
+      "filename": "modpack-v1.0.zip",
+      "size": "250 MB",
+      "requires": "Minecraft 1.21.1 (Fabric)",
+      "downloadUrl": "Downloads/modpack-v1.0.zip",
+      "changelog": [
+        "Initial stable release",
+        "Updated Create to latest version",
+        "Improved performance settings",
+        "General bug fixes and optimizations"
+      ]
+    },
+    {
+      "version": "0.9",
+      "title": "Modpack v0.9 – Beta",
+      "date": "2025-01-30",
+      "filename": "modpack-v0.9-beta.zip",
+      "size": "230 MB",
+      "requires": "Minecraft 1.21.1 (Fabric)",
+      "downloadUrl": "Downloads/modpack-v0.9-beta.zip",
+      "changelog": [
+        "Beta release",
+        "Mods A, B, C included",
+        "First feature test version"
+      ]
+    }
+  ]
+}
