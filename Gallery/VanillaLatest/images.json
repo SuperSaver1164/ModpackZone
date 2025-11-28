@@ -6,11 +6,10 @@
   { "src": "Photos/2025-10-30_00.17.19.png", "title": "Acacia house", "desc": "" },
   { "src": "Photos/2025-11-01_00.46.55.png", "title": "Spawn", "desc": "Lampposts added." },
   { "src": "Photos/2025-11-10_22.21.50.png", "title": "Blotsky", "desc": "Beginning his base." },
-  { "src": "Photos/2025-11-10_22.23.05.png", "title": "Void Floor", "desc": "No copper lanterns?" },
   { "src": "Photos/2025-11-14_20.05.21.png", "title": "Fire tower", "desc": "Next to the mob farm." },
 
   { "src": "Photos/2025-11-15_01.00.10.png", "title": "Fish tank", "desc": "and Blotsky inside of it" },
-  { "src": "Photos/2025-11-22_22.34.00.png", "title": "Blotsky", "desc": "Updated interior" },
+  { "src": "Photos/2025-11-22_22.34.00.png", "title": "Void Floor", "desc": "No copper lanterns?" },
   { "src": "Photos/2025-11-22_22.37.41.png", "title": "Jake's house", "desc": "and mob farm in the background" },
   { "src": "Photos/2025-11-22_22.41.07.png", "title": "Christmas biome", "desc": "" },
   { "src": "Photos/2025-11-22_22.41.20.png", "title": "Spawn builds", "desc": "" },
@@ -21,5 +20,7 @@
   { "src": "Photos/2025-11-27_22.00.02.png", "title": "Oliver's old house", "desc": "" },
   { "src": "Photos/2025-11-27_22.00.39.png", "title": "Rory's house", "desc": "" },
   { "src": "Photos/2025-11-27_22.02.15.png", "title": "Murph's base", "desc": "" },
-  { "src": "Photos/2025-11-27_22.03.56.png", "title": "Oliver's castle", "desc": "Too far away" }
+  { "src": "Photos/2025-11-27_22.03.56.png", "title": "Oliver's castle", "desc": "Too far away" },
+
+  { "src": "Photos/2025-11-28_00.46.33.png", "title": "Blotsky's workshop", "desc": "" }
 ]
