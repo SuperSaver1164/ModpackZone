@@ -71,7 +71,6 @@
             <p><strong>Filename:</strong> ${pack.filename}</p>
             <p><strong>Size:</strong> ${pack.size}</p>
             <p><strong>Requires:</strong> ${pack.requires}</p>
-            <p><a href="${pack.downloadUrl}" download>Download</a></p>
 
             <div class="changelog">
               <strong>Changelog:</strong>
@@ -79,6 +78,8 @@
                 ${pack.changelog.map(i => `<li>${i}</li>`).join("")}
               </ul>
             </div>
+
+            <p><a href="${pack.downloadUrl}" download>Download</a></p>
           `;
 
           grid.appendChild(card);
