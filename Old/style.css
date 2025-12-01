@@ -1,0 +1,176 @@
+html {
+  height: 100%;
+  width: 100%;
+ 
+
+  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+
+  background-image: linear-gradient(#d6d6d6, #008fc7, #008fc7, #d6d6d6);
+  /*background: linear-gradient(0deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);*/
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+h1{
+  text-align: center;
+  font-size: 75px;
+  -webkit-text-stroke: white;
+  padding-bottom: 0%;
+  padding-top: 1%;
+  margin-bottom: 0;
+}
+
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+table{
+  
+  border: 3px solid black;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%
+}
+th, td{
+  border: 2px solid black;
+}
+/*
+
+#modlist tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+*/
+/*
+#bb{
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+#br{
+  border-right: 2px solid black;
+}
+*/
+td{
+  
+  height: 50px;
+  vertical-align: center;
+  
+  font-size: 200%;
+  
+}
+
+#smalltext{
+  width: 35%;
+  font-size: 125%;
+  text-align: center;
+}
+
+#medium{
+  font-size: 40px;
+}
+
+p{
+  font-size: 60px;
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 2%;
+}
+
+
+
+h3{
+  text-align: center;
+}
+
+
+
+FOOT h3{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+
+a, a:visited, a:active {
+  color: inherit;
+}
+
+a:hover{
+  color: #0000e8;
+}
+
+ul{
+  text-align: center;
+  list-style-position: inside;
+}
+
+ul li{
+  padding-bottom: 1%;
+  font-size: 150%;
+}
+
+
+/* TOPBARSTUFF------------------------------------------ */
+
+
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #8f8f8f;
+  border-bottom: 2px solid #bbb;
+}
+
+ol li {
+  float: left;
+}
+
+ol li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+ol li a:hover {
+  background-color: #a5c6d2;
+  color: #ffffff;
+}
+
+ol {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+ol li {
+  border-right: 2px solid #bbb;
+}
+
+current li a{
+  background-color: #3fa8e9;
+}
+
+end{
+  float: right;
+  border-left: 2px solid #bbb;
+}

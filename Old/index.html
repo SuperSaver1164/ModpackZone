@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ModpackZone</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/jpeg" href="/ModpackZone/BrassCasing.jpg">
+</head>
+
+<body>
+  <h1 id="grad1">Welcome to</h1>
+  <img src="MODPACK-ZONE-3-14-2024.png">
+  <!-- <script src="script.js"></script> -->
+
+  <h3>This is where I host my modpack files so people can join my server!</h3>
+  <!-- <h3>Download below:</h3> -->
+  <h2></h2>
+  <h2><a href="downloadpage.html">Click here to get started!</a></h2>
+  
+
+  <FOOT><h3>Modpacks and website created and maintained by <a href="https://github.com/SuperSaver1164", target="_blank">SuperSaver1164</a></h3></FOOT>
+  
+</body>
+
+  <body class="navbar">
+  <div id="navbar"></div>
+
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        // Insert navbar HTML
+        document.getElementById("navbar").innerHTML = data;
+
+        // Find and wrap the current page link
+        const links = document.querySelectorAll("#navbar a");
+        const currentPage = window.location.pathname.split("/").pop();
+
+        links.forEach(link => {
+          const linkPage = link.getAttribute("href");
+          if (linkPage === currentPage) {
+            const wrapper = document.createElement("current");
+            link.parentElement.replaceWith(wrapper);
+            wrapper.appendChild(link.parentElement.cloneNode(true));
+          }
+        });
+      });
+  </script>
+</body>
+
+
+
+</html>
