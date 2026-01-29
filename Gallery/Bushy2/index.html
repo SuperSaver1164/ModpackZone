@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ModpackZone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/jpeg" href="/ModpackZone/BrassCasing.jpg">
+</head>
+<body>
+
+<div class="gallery"></div>
+
+<script>
+function deterministicSize(filename) {
+  let hash = 0;
+  for (let i = 0; i < filename.length; i++) {
+    hash = (hash << 5) - hash + filename.charCodeAt(i);
+    hash |= 0;
+  }
+
+  const sizes = ["wide", "big"]; // "small", | no more small size
+  return sizes[Math.abs(hash) % sizes.length];
+}
+
+fetch("images.json")
+  .then(res => res.json())
+  .then(images => {
+    const gallery = document.querySelector(".gallery");
+
+    images.forEach(img => {
+      const size = deterministicSize(img.src);
+
+      const box = document.createElement("div");
+      box.className = `img-box ${size}`;
+      box.setAttribute("tabindex", "0");  // ← THIS FIXES IOS HOVER
+
+      box.innerHTML = `
+        <img src="${img.src}" alt="${img.title}">
+        <div class="overlay">
+          <h3>${img.title}</h3>
+          <p>${img.desc}</p>
+        </div>
+      `;
+
+      gallery.appendChild(box);
+    });
+  });
+</script>
+
+<body class="navbar">
+  <div id="navbar"></div>
+
+<script>
+    fetch("/ModpackZone/navbar.html")
+      .then(response => response.text())
+      .then(data => {
+        // Insert navbar HTML
+        document.getElementById("navbar").innerHTML = data;
+
+        // Find and wrap the current page link
+        const links = document.querySelectorAll("#navbar a");
+        const currentPage = window.location.pathname.split("/").pop();
+
+        links.forEach(link => {
+          const linkPage = link.getAttribute("href");
+          if (linkPage === currentPage) {
+            const wrapper = document.createElement("current");
+            link.parentElement.replaceWith(wrapper);
+            wrapper.appendChild(link.parentElement.cloneNode(true));
+          }
+        });
+      });
+  </script>
+
+
+
+</body>
+</html>
