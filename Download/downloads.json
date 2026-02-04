@@ -1,16 +1,16 @@
 {
   "downloads": [
     {
-      "version": "1.0",
-      "title": "ServerPack 3.1.5",
-      "date": "11/28/2025",
-      "filename": "ServerPack3.1.5.zip",
-      "size": "111 KB",
-      "requires": "Minecraft 1.20.1 (Forge)",
-      "downloadUrl": "Packs/ServerPack3.1.5.zip",
+      "version": "4.0.0",
+      "title": "ServerPack 4.0.0",
+      "date": "Not uploaded",
+      "filename": "ServerPack4.0.0.zip",
+      "size": "Not known",
+      "requires": "Minecraft 1.21.1 (NeoForge)",
+      "downloadUrl": "Packs/none.zip",
       "changelog": [
-        "Update to Create 6.0.6",
-        "Includes Vanillin for better performance"
+        "Pack redone from the ground up",
+        "Significant performance improvements"
       ]
     },
     {
