@@ -82,3 +82,27 @@ body {
 .gallery li .description {
   display: none;
 }
+
+.server-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.tag {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    user-select: none;
+}
+
+.tag.vanilla {
+    background: #4CAF50;
+}
+
+.tag.version {
+    background: #5865F2;
+}
