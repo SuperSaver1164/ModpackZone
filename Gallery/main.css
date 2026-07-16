@@ -102,11 +102,13 @@ body {
 }
 
 .tag.vanilla {
-    background: #4CAF50;
+    background: linear-gradient(135deg, #6fdc7a, #3d9c44);
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.25);
 }
 
 .tag.version {
-    background: #5865F2;
+    background: linear-gradient(135deg, #7289ff, #3f51d8);
+    box-shadow: 0 4px 10px rgba(88, 101, 242, 0.25);
 }
 
 .view-btn {
