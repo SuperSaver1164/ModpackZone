@@ -111,6 +111,11 @@ body {
     box-shadow: 0 4px 10px rgba(88, 101, 242, 0.25);
 }
 
+.tag.modded {
+    background: linear-gradient(135deg, #cf8452, #9d4b22);
+    box-shadow: 0 4px 10px rgba(179, 90, 46, 0.25);
+}
+
 .view-btn {
     display: inline-flex;
     align-items: center;
@@ -141,11 +146,11 @@ body {
     transform: translateY(0);
 }
 
-.overlay {
+/* .overlay {
     transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .overlay:hover {
     transform: translateY(-6px);
     box-shadow: 0 16px 40px rgba(0,0,0,.18);
-}
+} */
